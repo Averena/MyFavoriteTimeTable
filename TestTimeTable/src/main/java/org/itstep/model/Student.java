@@ -15,24 +15,7 @@ import lombok.Setter;
 @Getter
 @Entity
 @Table( name = "STUDENTS")
-public class Student {
-
-	@Id
-	@Column(name = "LOGIN")
-	@JsonProperty
-	private String login;
-	
-	@Column(name = "PASSWORD")
-	@JsonProperty
-	private String password;
-	
-	@Column(name = "FIRS_TNAME")
-	@JsonProperty
-	private String firstName;
-	
-	@Column(name = "SECOND_NAME")
-	@JsonProperty
-	private String secondName;
+public class Student extends User{
 	
 	@ManyToOne(targetEntity = Group.class)
 	private Group group;
